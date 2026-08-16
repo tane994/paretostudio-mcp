@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.paretostudio/paretostudio-mcp",
+  "description": "Read your ParetoStudio prompt, agent, and skill library from Claude Code, Cursor, and any MCP client. Install agents and skills as files into Claude Code.",
+  "status": "active",
+  "version": "0.2.1",
+  "websiteUrl": "https://paretostudio.io/docs/mcp-server",
+  "repository": {
+    "url": "https://github.com/tane994/paretostudio-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "paretostudio-mcp",
+      "version": "0.2.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "PARETOSTUDIO_API_KEY",
+          "description": "Your ParetoStudio API key (starts with psk_). Create one at https://paretostudio.io/settings under Developer.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "PARETOSTUDIO_API_URL",
+          "description": "API base URL. Only change this when pointing at a self-hosted or staging instance.",
+          "isRequired": false,
+          "default": "https://paretostudio.io"
+        }
+      ]
+    }
+  ]
+}

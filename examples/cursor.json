@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "paretostudio": {
+      "command": "npx",
+      "args": ["-y", "paretostudio-mcp@latest"],
+      "env": {
+        "PARETOSTUDIO_API_KEY": "psk_your_key_here"
+      }
+    }
+  }
+}
