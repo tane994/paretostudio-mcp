@@ -1,0 +1,6 @@
+[mcp_servers.paretostudio]
+command = "npx"
+args = ["-y", "paretostudio-mcp@latest"]
+
+[mcp_servers.paretostudio.env]
+PARETOSTUDIO_API_KEY = "psk_your_key_here"

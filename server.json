@@ -3,7 +3,7 @@
   "name": "io.paretostudio/paretostudio-mcp",
   "description": "Read your ParetoStudio prompt, agent, and skill library from Claude Code, Cursor, and any MCP client. Install agents and skills as files into Claude Code.",
   "status": "active",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "websiteUrl": "https://paretostudio.io/docs/mcp-server",
   "repository": {
     "url": "https://github.com/tane994/paretostudio-mcp",
@@ -14,7 +14,7 @@
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "paretostudio-mcp",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "transport": {
         "type": "stdio"
       },

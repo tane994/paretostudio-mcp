@@ -58,9 +58,20 @@ Go to [paretostudio.io/settings](https://paretostudio.io/settings) and navigate 
 }
 ```
 
+**Codex** (`~/.codex/config.toml`):
+
+```toml
+[mcp_servers.paretostudio]
+command = "npx"
+args = ["-y", "paretostudio-mcp@latest"]
+
+[mcp_servers.paretostudio.env]
+PARETOSTUDIO_API_KEY = "psk_your_key_here"
+```
+
 ### 3. Use it
 
-Ask Claude to "list my prompts" or "install my agent" -- the MCP tools are available automatically.
+Ask Codex, Claude, or your MCP client to "list my prompts" or "install my agent" — the tools are available automatically.
 
 ## Available Tools
 
@@ -75,7 +86,7 @@ Ask Claude to "list my prompts" or "install my agent" -- the MCP tools are avail
 | `list_skills` | List all skills |
 | `get_skill` | Get skill with full configuration |
 | `search_skills` | Search skills |
-| `install_skill` | Download skill to `.claude/skills/` |
+| `install_skill` | Install skill for Claude or Codex project layouts |
 | `install_agent` | Download agent to `.claude/agents/` |
 | `install_bundle` | Install agent + skills in one operation |
 | `create_prompt` | Create a new prompt |
@@ -87,6 +98,11 @@ Ask Claude to "list my prompts" or "install my agent" -- the MCP tools are avail
 | `create_agent` | Create a new agent |
 | `update_agent` | Update an agent |
 | `delete_agent` | Delete an agent |
+
+Install tools never overwrite existing files by default. Pass `overwrite: true`
+only when you intentionally want to replace an installed agent or skill.
+For Codex project skills, call `install_skill` with `client: "codex"`; the skill
+is written to `.agents/skills/<name>/SKILL.md` instead of `.claude/skills/`.
 
 Write tools respect your plan's library caps (Free: 5 prompts / 2 agents / 2 skills; Pro and Team: unlimited).
 
