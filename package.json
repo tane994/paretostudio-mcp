@@ -1,0 +1,12 @@
+{
+  "name": "paretostudio-mcp",
+  "version": "0.4.1",
+  "description": "Read, create, and install your ParetoStudio prompts, agents, and skills from any MCP client.",
+  "private": true,
+  "homepage": "https://paretostudio.io/docs/mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tane994/paretostudio-mcp"
+  },
+  "license": "MIT"
+}
