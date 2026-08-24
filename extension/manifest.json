@@ -2,7 +2,7 @@
   "manifest_version": "0.2",
   "name": "paretostudio-mcp",
   "display_name": "ParetoStudio",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Read your ParetoStudio prompt, agent, and skill library from Claude — and install agents and skills into your projects.",
   "long_description": "ParetoStudio is where you build and organize prompts, agents, and skills. This extension connects Claude to your library: list, search, and read prompts, agents, and skills; create and update them without leaving the conversation; and install agents and skills as files into Claude Code projects. Requires a free ParetoStudio account and an API key (Settings → Developer).",
   "author": {
