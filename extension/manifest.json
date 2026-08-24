@@ -1,0 +1,50 @@
+{
+  "manifest_version": "0.2",
+  "name": "paretostudio-mcp",
+  "display_name": "ParetoStudio",
+  "version": "0.4.0",
+  "description": "Read your ParetoStudio prompt, agent, and skill library from Claude — and install agents and skills into your projects.",
+  "long_description": "ParetoStudio is where you build and organize prompts, agents, and skills. This extension connects Claude to your library: list, search, and read prompts, agents, and skills; create and update them without leaving the conversation; and install agents and skills as files into Claude Code projects. Requires a free ParetoStudio account and an API key (Settings → Developer).",
+  "author": {
+    "name": "ParetoStudio",
+    "email": "hello@paretostudio.io",
+    "url": "https://paretostudio.io"
+  },
+  "homepage": "https://paretostudio.io",
+  "documentation": "https://paretostudio.io/docs/mcp-server",
+  "support": "mailto:support@paretostudio.io",
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/server.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/server.mjs"],
+      "env": {
+        "PARETOSTUDIO_API_KEY": "${user_config.api_key}"
+      }
+    }
+  },
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "ParetoStudio API Key",
+      "description": "Starts with psk_. Create one at paretostudio.io → Settings → Developer.",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "keywords": ["prompts", "agents", "skills", "library", "paretostudio", "mcp"],
+  "license": "MIT",
+  "privacy_policies": ["https://paretostudio.io/privacy"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tane994/paretostudio-mcp"
+  }
+}

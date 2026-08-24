@@ -138,6 +138,18 @@ gate refuses a build whose server changed since the last bump.
 - [Get API Key](https://paretostudio.io/settings)
 - [ParetoStudio](https://paretostudio.io)
 
+## Privacy Policy
+
+The server is a local process on your machine. It talks only to the
+ParetoStudio API (`https://paretostudio.io`, or the `PARETOSTUDIO_API_URL` you
+configure) using the API key you provide, and sends nothing anywhere else.
+Privacy policy: [paretostudio.io/privacy](https://paretostudio.io/privacy)
+
+## Security
+
+See [SECURITY.md](SECURITY.md). Report vulnerabilities to
+support@paretostudio.io — not in public issues.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
